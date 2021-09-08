@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<script>location.href.match("https://")||(location.href=location.href.replace("http","https"))</script>
+    <script src="https://kit.fontawesome.com/f890ad0835.js" crossorigin="anonymous"></script>
+		<title>Timmy</title>
+		<link rel="icon" href="https://images.discordapp.net/avatars/744760603696169000/ac359f0ea8c115b895c64574d438e549.png?size=128" type="image/icon type">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="/">Timmy</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="/">Home</a></li>
+								<li><a href="#one">Dashboard</a></li>
+								<li><a href="about">About</a></li>
+								<li><a href="#footer">Support</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Timmy</h2>
+							<p>A multi-purpose Discord bot</p>
+              <ul class="actions">
+                <li><a href="#one" class="button">Dashboard</a></li>
+              </ul>
+							<ul class="actions">
+                      <li><a href="https://discord.com/oauth2/authorize?client_id=744760603696169000&permissions=8&scope=bot" class="button">Add to Server</a></li>
+                    </ul>
+                    <br>
+                    	<ul class="actions">
+                      <li><a href="https://stats.uptimerobot.com/vLVpDhEj64" class="button">Status</a></li>
+                    </ul>
+                    <br>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Timmy Bot Dashboard</h2>
+                  {% if logged %}
+                    <ul class="actions">
+                      <li><a href="/logout/" class="button">Logout</a></li>
+                    </ul>
+                    <br>
+                  {% else %}
+                    <ul class="actions">
+                      <li><a href="/login/" class="button">Log into Discord</a></li>
+                    </ul>
+                  {% endif %}
+
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Links</h2>
+							<p>Support</p>
+							<!-- <form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form> -->
+							<ul class="contact">
+<!--								<li class="icon solid fa-home">-->
+<!--									Address-->
+<!--								</li>-->
+<!--								<li class="icon solid fa-phone">Phone Number</li>-->
+<!--								<li class="icon solid fa-envelope"><a href="mailto:">Email</a></li>-->
+<!--								<li class="icon brands fa-twitter"><a href="#">Twitter</a></li>-->
+<!--								<li class="icon brands fa-facebook-f"><a href="#">Facebook</a></li>-->
+<!--								<li class="icon brands fa-instagram"><a href="#">Instagram</a></li>-->
+<!--                <li class="icon brands fa-youtube"><a href="#">YouTube</a></li>-->
+                <li class="icon brands fa-discord"><a href="https://discord.gg/A4tf2PERgb">Discord</a></li>
+<!--								<li class="icon brands fa-paypal"><a href="#">PayPal</a></li>-->
+<!--								<li class="icon brands fa-patreon"><a href="#">Patreon</a></li>-->
+<!--								<li class="icon brands fa-github"><a href="#">GitHub</a></li>-->
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Shravan S. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+    {% block scripts %}
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+    {% endblock %}
+	</body>
+</html>
